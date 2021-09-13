@@ -67,6 +67,7 @@ checkResult():boolean{
     
     if(!this.resultGame && this.countClick==5){
       this.resultGame ="Никто не выиграл";
+      this.isDisable = true;
      //  alert('The game is over!');
     }
    // this.isDisable = true;
