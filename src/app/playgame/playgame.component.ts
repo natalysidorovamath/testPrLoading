@@ -27,9 +27,9 @@ export class PlaygameComponent implements OnInit {
    
      this.secondPlayer(event);
     this.countClick++;
-    // if(this.checkResult()){
-    //   //alert('The game is over!')
-    // }
+    if(this.checkResult()){
+      //alert('The game is over!')
+    }
   }
   secondPlayer(index:number){
    
@@ -53,6 +53,7 @@ checkResult():boolean{
       this.resultGame="Крестики выиграли";
       btRet = true;
       this.isDisable = true;
+      // alert('The game is over!');
        return true;
     }
     if(this.checkSecodWinner()){
@@ -60,12 +61,15 @@ checkResult():boolean{
       if(btRet){this.isLoading= true;}
       btRet = true;
       this.isDisable = true;
+      // alert('The game is over!');
        return true;
     }
     
     if(!this.resultGame && this.countClick==5){
       this.resultGame ="Никто не выиграл";
+     //  alert('The game is over!');
     }
+   // this.isDisable = true;
     return false;
   
   //}
